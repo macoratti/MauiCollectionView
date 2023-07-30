@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCollectionView.MainPage">
+
+    <CollectionView>
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Santos</x:String>
+                <x:String>Palmeiras</x:String>
+                <x:String>Flamengo</x:String>
+                <x:String>Atlético-MG</x:String>
+                <x:String>São Paulo</x:String>
+                <x:String>Internacional</x:String>
+                <x:String>Atlético-PR</x:String>
+            </x:Array>
+        </CollectionView.ItemsSource>
+    </CollectionView>
+
+</ContentPage>
