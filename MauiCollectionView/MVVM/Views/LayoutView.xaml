@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCollectionView.MVVM.Views.LayoutView"
+             Title="LayoutView">
+
+
+    <CollectionView ItemsSource="{Binding Produtos}"
+                    SelectionMode="Multiple"
+                    SelectionChanged="CollectionView_SelectionChanged">
+        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Margin="15" HeightRequest="250"                                  
+                                   WidthRequest="180">
+                    <VerticalStackLayout>
+                        <Image Source="{Binding Imagem}"/>
+                        <Label HorizontalTextAlignment="Center"
+                               Text="{Binding Nome}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.Header>
+            <Frame BackgroundColor="{StaticResource Primary}">
+                <Label Text="Produtos" 
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                FontSize="Large" />
+            </Frame>
+        </CollectionView.Header>
+        <CollectionView.Footer>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Fim da lista" 
+                FontAttributes="Bold"
+                FontSize="Title"/>
+            </HorizontalStackLayout>
+        </CollectionView.Footer>
+    </CollectionView>
+
+</ContentPage>

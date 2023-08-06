@@ -6,15 +6,34 @@
     <CollectionView>
         <CollectionView.ItemsSource>
             <x:Array Type="{x:Type x:String}">
-                <x:String>Santos</x:String>
+                <!--<x:String>Santos</x:String>
                 <x:String>Palmeiras</x:String>
                 <x:String>Flamengo</x:String>
                 <x:String>Atlético-MG</x:String>
                 <x:String>São Paulo</x:String>
                 <x:String>Internacional</x:String>
-                <x:String>Atlético-PR</x:String>
+                <x:String>Atlético-PR</x:String>-->
             </x:Array>
         </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout HorizontalOptions="Center" 
+                  Padding="10">
+                    <Label Text="{Binding .}" 
+                    FontSize="Title" 
+                    TextColor="Blue"
+                    FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Image Source="semfoto.jpg" HeightRequest="200"/>
+                    <Label Text="Sem dados..." 
+                           FontSize="Large"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+        </CollectionView.EmptyView>
     </CollectionView>
 
 </ContentPage>
